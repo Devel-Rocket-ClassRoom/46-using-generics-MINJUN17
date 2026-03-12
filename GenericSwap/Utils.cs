@@ -14,9 +14,7 @@ class Utils
     }
     public static void SwapInArray<T>(T[] array, int index1,  int index2)
     {
-        T temp = array[index1];
-        array[index1] = array[index2];
-        array[index2] = temp;
+        Swap(ref array[index1], ref array[index2]);
     }
 
     public static T FindMin<T>(T[] array) where T : IComparable<T>
@@ -31,13 +29,9 @@ class Utils
     {
         int first = 0;
         int last = array.Length - 1;
-
         while (first < last)
         {
-            T temp = array[first];
-            array[first] = array[last];
-            array[last] = temp;
-
+            SwapInArray<T>(array, first, last);
             first++;
             last--;
         }
