@@ -29,17 +29,17 @@ class Utils
     }
     public static void Reverse<T>(T[] array)
     {
-        int left = 0;
-        int right = array.Length - 1;
+        int first = 0;
+        int last = array.Length - 1;
 
-        while (left < right)
+        while (first < last)
         {
-            T temp = array[left];
-            array[left] = array[right];
-            array[right] = temp;
+            T temp = array[first];
+            array[first] = array[last];
+            array[last] = temp;
 
-            left++;
-            right--;
+            first++;
+            last--;
         }
     }
 }
