@@ -14,7 +14,7 @@ class Utils
     }
     public static void SwapInArray<T>(T[] array, int index1,  int index2)
     {
-        Swap(ref array[index1], ref array[index2]);
+        Swap<T>(ref array[index1], ref array[index2]);
     }
 
     public static T FindMin<T>(T[] array) where T : IComparable<T>
